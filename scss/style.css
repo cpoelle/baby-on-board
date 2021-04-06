@@ -1,0 +1,117 @@
+/* Color Palette */
+/* Background styles */
+body {
+  background: radial-gradient(ellipse closest-side at 50px 60px, #F28B74 18px, transparent 0), radial-gradient(ellipse closest-side at 150px 175px, #F28B74 18px, transparent 0);
+  background-color: #f9d8d4;
+  background-size: 180px 210px;
+  -webkit-animation: animatedBackground 0.5s cubic-bezier(0.61, -0.64, 0.58, 1.46) forwards;
+          animation: animatedBackground 0.5s cubic-bezier(0.61, -0.64, 0.58, 1.46) forwards;
+}
+
+/* Animation */
+@-webkit-keyframes animatedBackground {
+  from {
+    background-position: 0 50%;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@keyframes animatedBackground {
+  from {
+    background-position: 0 50%;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+.letter {
+  margin: 0 auto;
+  padding: 32px;
+  max-width: 50%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.letter__title {
+  font-family: 'Sacramento', cursive;
+  font-size: 64px;
+  font-weight: 400;
+  margin-bottom: 84px;
+  background-color: white;
+  padding: 18px;
+  border-radius: 12px;
+  border: 4px solid #F28B74;
+  color: #F28B74;
+  cursor: default;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.letter__box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.letter__opener {
+  position: relative;
+  width: 250px;
+  height: auto;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.letter__opener:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.letter__opener svg {
+  -webkit-filter: drop-shadow(8px 8px 6px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(8px 8px 6px rgba(0, 0, 0, 0.2));
+}
+
+.letter__opener--info {
+  position: absolute;
+  top: -60px;
+  right: -90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+}
+
+.letter__opener--info svg {
+  width: 100px;
+  position: relative;
+}
+/*# sourceMappingURL=style.css.map */

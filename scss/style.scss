@@ -1,0 +1,96 @@
+/* Color Palette */
+
+$softPink: #f9d8d4;
+$yellow: #f9a734;
+$red: #F28B74;
+$white: #fff;
+
+/* Background styles */
+
+body { 
+	background:
+	/* Pineapple base */
+	radial-gradient(ellipse closest-side at 50px 60px, $red 18px, transparent 0),
+	
+	radial-gradient(ellipse closest-side at 150px 175px, $red 18px, transparent 0);
+	
+	background-color: $softPink;
+	background-size: 180px 210px;
+	animation: animatedBackground .5s cubic-bezier(.61,-0.64,.58,1.46) forwards;
+}
+
+
+/* Animation */
+
+@keyframes animatedBackground {
+	from { background-position: 0 50%; }
+	to { background-position: 0 0; }
+}
+
+.letter {
+  margin: 0 auto;
+  padding: 32px;
+  max-width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  &__title {
+    font-family: 'Sacramento', cursive;
+    font-size: 64px;
+    font-weight: 400;
+    margin-bottom: 84px;
+    background-color: white;
+    padding: 18px;
+    border-radius: 12px;
+    border: 4px solid $red;
+    color: $red;
+    cursor: default;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+  }
+  
+  &__box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  &__opener {
+    position: relative;
+    width: 250px;
+    height: auto;
+    cursor: grab; 
+    
+    &:active {
+      cursor: grabbing; 
+    }
+    
+    & svg { 
+      -webkit-filter: drop-shadow( 8px 8px 6px rgba(0, 0, 0, .2));
+        filter: drop-shadow( 8px 8px 6px rgba(0, 0, 0, .2));
+    }
+    
+    &--info {
+      position: absolute;
+      top: -60px;
+      right: -90px;
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      height: 80px;
+      
+      & svg {
+        width: 100px;
+        position: relative;
+        
+      }
+    }
+  }
+}
+
+
