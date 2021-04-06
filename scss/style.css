@@ -261,6 +261,10 @@ body {
   border: 2px solid #f28b74;
   -webkit-transition: all 0.2s cubic-bezier(0.28, 0.05, 0.65, 0.97);
   transition: all 0.2s cubic-bezier(0.28, 0.05, 0.65, 0.97);
+  -moz-user-select: none;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .button:hover {
