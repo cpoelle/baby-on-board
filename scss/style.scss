@@ -2,95 +2,219 @@
 
 $softPink: #f9d8d4;
 $yellow: #f9a734;
-$red: #F28B74;
+$red: #f28b74;
 $white: #fff;
 
 /* Background styles */
 
-body { 
+body {
+	margin: 0;
 	background:
-	/* Pineapple base */
-	radial-gradient(ellipse closest-side at 50px 60px, $red 18px, transparent 0),
-	
-	radial-gradient(ellipse closest-side at 150px 175px, $red 18px, transparent 0);
-	
+	/* Pineapple base */ radial-gradient(
+			ellipse closest-side at 50px 60px,
+			$red 18px,
+			transparent 0
+		),
+		radial-gradient(
+			ellipse closest-side at 150px 175px,
+			$red 18px,
+			transparent 0
+		);
+
 	background-color: $softPink;
 	background-size: 180px 210px;
-	animation: animatedBackground .5s cubic-bezier(.61,-0.64,.58,1.46) forwards;
+	animation: animatedBackground 0.5s cubic-bezier(0.61, -0.64, 0.58, 1.46)
+		forwards;
 }
-
 
 /* Animation */
 
 @keyframes animatedBackground {
-	from { background-position: 0 50%; }
-	to { background-position: 0 0; }
+	from {
+		background-position: 0 50%;
+	}
+	to {
+		background-position: 0 0;
+	}
+}
+
+.is-hidden {
+	display: none;
 }
 
 .letter {
-  margin: 0 auto;
-  padding: 32px;
-  max-width: 50%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-  &__title {
-    font-family: 'Sacramento', cursive;
-    font-size: 64px;
-    font-weight: 400;
-    margin-bottom: 84px;
-    background-color: white;
-    padding: 18px;
-    border-radius: 12px;
-    border: 4px solid $red;
-    color: $red;
-    cursor: default;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    user-select: none;
-  }
-  
-  &__box {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  &__opener {
-    position: relative;
-    width: 250px;
-    height: auto;
-    cursor: grab; 
-    
-    &:active {
-      cursor: grabbing; 
-    }
-    
-    & svg { 
-      -webkit-filter: drop-shadow( 8px 8px 6px rgba(0, 0, 0, .2));
-        filter: drop-shadow( 8px 8px 6px rgba(0, 0, 0, .2));
-    }
-    
-    &--info {
-      position: absolute;
-      top: -60px;
-      right: -90px;
-      display: flex;
-      justify-content: center; 
-      align-items: center;
-      height: 80px;
-      
-      & svg {
-        width: 100px;
-        position: relative;
-        
-      }
-    }
-  }
+	margin: auto;
+	max-width: 800px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&__title {
+		font-family: "Sacramento", cursive;
+		font-size: 64px;
+		font-weight: 400;
+		margin-bottom: 84px;
+		background-color: white;
+		padding: 18px;
+		border-radius: 12px;
+		border: 4px solid $red;
+		color: $red;
+		cursor: default;
+		-moz-user-select: none;
+		-khtml-user-select: none;
+		user-select: none;
+	}
+
+	&__invitation {
+		font-family: "Roboto", sans-serif;
+		background-color: white;
+		padding: 18px 24px;
+		font-size: 20px;
+		border-radius: 12px;
+		border: 4px solid $red;
+		color: $red;
+		width: 100%;
+		position: relative;
+
+		box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+			0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+			0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+			0 100px 80px rgba(0, 0, 0, 0.07);
+
+		&--baby {
+			position: absolute;
+			top: -50px;
+			right: -50px;
+			z-index: -1;
+
+			& svg {
+				width: 120px;
+			}
+		}
+
+		&--title {
+			font-family: "Sacramento", cursive;
+			font-size: 64px;
+			text-align: center;
+		}
+
+		&--group {
+			display: flex;
+			padding: 8px 0;
+		}
+
+		&--number {
+			font-weight: bold;
+			width: 20%;
+		}
+
+		&--name {
+			width: 40%;
+		}
+
+		&--start,
+		&--end {
+			width: 20%;
+		}
+
+		&--button {
+			text-align: center;
+			padding: 32px 0 16px;
+		}
+	}
+
+	&__box {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__opener {
+		position: relative;
+		width: 250px;
+		height: auto;
+		cursor: grab;
+
+		&:active {
+			cursor: grabbing;
+		}
+
+		& svg {
+			-webkit-filter: drop-shadow(8px 8px 6px rgba(0, 0, 0, 0.2));
+			filter: drop-shadow(8px 8px 6px rgba(0, 0, 0, 0.2));
+			transform: rotate(0) scale(1);
+			transition: all 0.2s cubic-bezier(0.28, 0.05, 0.65, 0.97);
+		}
+
+		&:hover {
+			& svg,
+			& > div {
+				transform: rotate(0) scale(1.2);
+				animation: shake 0.4s 1;
+				animation-delay: 0.4s;
+				transition: all 0.3s cubic-bezier(0.28, 0.05, 0.65, 0.97);
+			}
+
+			& > div {
+				top: -70px;
+				right: -110px;
+			}
+		}
+
+		@keyframes shake {
+			0% {
+				transform: rotate(3deg) scale(1.2);
+			}
+			20% {
+				transform: rotate(-3deg) scale(1.2);
+			}
+			40% {
+				transform: rotate(3deg) scale(1.2);
+			}
+			60% {
+				transform: rotate(-3deg) scale(1.2);
+			}
+			80% {
+				transform: rotate(3deg) scale(1.2);
+			}
+			100% {
+				transform: rotate(0) scale(1.2);
+			}
+		}
+
+		&--info {
+			position: absolute;
+			top: -60px;
+			right: -90px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 80px;
+			transition: all 0.2s cubic-bezier(0.28, 0.05, 0.65, 0.97);
+
+			& img {
+				width: 86px;
+				position: relative;
+			}
+		}
+	}
 }
 
+.button {
+	background-color: $red;
+	color: $white;
+	cursor: pointer;
+	padding: 8px 16px;
+	border-radius: 12px;
+	border: 2px solid $red;
+	transition: all 0.2s cubic-bezier(0.28, 0.05, 0.65, 0.97);
 
+	&:hover {
+		transition: all 0.2s cubic-bezier(0.28, 0.05, 0.65, 0.97);
+		background-color: $white;
+		color: $red;
+	}
+}
