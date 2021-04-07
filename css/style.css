@@ -1,7 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* Color Palette */
 /* Background styles */
 body {
   margin: 0;
+  background: -o-radial-gradient(50px 60px, ellipse closest-side, #f28b74 18px, transparent 0), -o-radial-gradient(150px 175px, ellipse closest-side, #f28b74 18px, transparent 0);
   background: radial-gradient(ellipse closest-side at 50px 60px, #f28b74 18px, transparent 0), radial-gradient(ellipse closest-side at 150px 175px, #f28b74 18px, transparent 0);
   background-color: #f9d8d4;
   background-size: 180px 210px;
@@ -155,20 +163,24 @@ body {
 
 .letter__opener svg {
   -webkit-transform: rotate(0) scale(1);
-          transform: rotate(0) scale(1);
+          -ms-transform: rotate(0) scale(1);
+      transform: rotate(0) scale(1);
   -webkit-transition: all 0.2s cubic-bezier(0.28, 0.05, 0.65, 0.97);
+  -o-transition: all 0.2s cubic-bezier(0.28, 0.05, 0.65, 0.97);
   transition: all 0.2s cubic-bezier(0.28, 0.05, 0.65, 0.97);
 }
 
 .letter__opener:hover svg,
 .letter__opener:hover > div {
   -webkit-transform: rotate(0) scale(1.2);
-          transform: rotate(0) scale(1.2);
+          -ms-transform: rotate(0) scale(1.2);
+      transform: rotate(0) scale(1.2);
   -webkit-animation: shake 0.4s 1;
           animation: shake 0.4s 1;
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
   -webkit-transition: all 0.3s cubic-bezier(0.28, 0.05, 0.65, 0.97);
+  -o-transition: all 0.3s cubic-bezier(0.28, 0.05, 0.65, 0.97);
   transition: all 0.3s cubic-bezier(0.28, 0.05, 0.65, 0.97);
 }
 
@@ -246,6 +258,7 @@ body {
           align-items: center;
   height: 80px;
   -webkit-transition: all 0.2s cubic-bezier(0.28, 0.05, 0.65, 0.97);
+  -o-transition: all 0.2s cubic-bezier(0.28, 0.05, 0.65, 0.97);
   transition: all 0.2s cubic-bezier(0.28, 0.05, 0.65, 0.97);
 }
 
@@ -262,6 +275,7 @@ body {
   border-radius: 12px;
   border: 2px solid #f28b74;
   -webkit-transition: all 0.2s cubic-bezier(0.28, 0.05, 0.65, 0.97);
+  -o-transition: all 0.2s cubic-bezier(0.28, 0.05, 0.65, 0.97);
   transition: all 0.2s cubic-bezier(0.28, 0.05, 0.65, 0.97);
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -271,6 +285,7 @@ body {
 
 .button:hover {
   -webkit-transition: all 0.2s cubic-bezier(0.28, 0.05, 0.65, 0.97);
+  -o-transition: all 0.2s cubic-bezier(0.28, 0.05, 0.65, 0.97);
   transition: all 0.2s cubic-bezier(0.28, 0.05, 0.65, 0.97);
   background-color: #fff;
   color: #f28b74;
@@ -319,4 +334,3 @@ body {
     width: 100px;
   }
 }
-/*# sourceMappingURL=style.css.map */
