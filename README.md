@@ -1,6 +1,6 @@
-# baby-on-board
+# Digital Party Timetable for Babypart
 
-simple invitation site for a (online) baby party. with a lot of confetti ;)
+This was just a small fun project to build a simple invitation site for a (online) baby party with friends during the corona pandemic. With a lot of confetti served with javascript ;)
 
 ## Unclicked:
 
